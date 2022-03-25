@@ -75,7 +75,7 @@ class ReactFacebookLoginWithButton extends React.Component {
         <this.props.tag
           type={typeButton}
           className={`${cssClass} ${size}`}
-          style={ buttonStyle }
+          style={buttonStyle}
           onClick={onClick}
           {...optionalProps}
         >
