@@ -24,6 +24,7 @@ module.exports = {
   },
 
   output: {
+    globalObject: 'this',
     filename: 'facebook-login-[name].js',
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'umd',

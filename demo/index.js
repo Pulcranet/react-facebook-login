@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Link, browserHistory } from 'react-router';
+import { Link, Router, Route } from 'react-router-dom';
 import FacebookLogin from '../src/facebook';
-import FacebookLoginWithButton from '../src/facebook-with-button'
+import FacebookLoginWithButton from '../src/facebook-with-button';
+import { createBrowserHistory } from 'history';
+
+const history = createBrowserHistory();
 
 const responseFacebook = (response) => {
   console.log(response);
@@ -57,9 +60,11 @@ class Dummy extends Component {
 }
 
 ReactDOM.render(
-  <Router history={browserHistory}>
-    <Route path="/" component={Base}/>
-    <Route path="/dummy" component={Dummy}/>
+  <Router history={history}>
+    <div>
+      <Route path="/" component={Base}/>
+      <Route path="/dummy" component={Dummy}/>
+    </div>
   </Router>,
   document.getElementById('demo')
 );

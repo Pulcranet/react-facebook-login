@@ -13,6 +13,7 @@ module.exports = {
     }]
   },
   output: {
+    globalObject: 'this',
     filename: './bundle.js',
     path: path.resolve(__dirname, 'demo'),
   },
